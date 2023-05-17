@@ -1,0 +1,26 @@
+$colors: (
+  primary: (
+    base: #ec0000,
+    contrast: #fff,
+  ),
+  secondary:  (
+    base: #0d8086,
+    contrast: #fff,
+  ),
+  success:  (
+    base: #0b873c,
+    contrast: #fff,
+  ),
+  attention:  (
+    base: #b18302,
+    contrast: #fff,
+  ),
+  caution:  (
+    base: #3e68aa,
+    contrast: #fff,
+  ),
+  warning:  (
+    base: #990000,
+    contrast: #fff,
+  ),
+) !default;

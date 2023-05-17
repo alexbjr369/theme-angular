@@ -1,0 +1,27 @@
+@import './app/styles/variables';
+@import './app/styles/functions';
+@import './app/styles/mixins';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  @each $name, $map in $colors {
+    @include generate-color-custom-properties($name);
+  }
+}
+
+@each $name, $map in $colors {
+  @include generate-color-classes($name);
+}
+
+

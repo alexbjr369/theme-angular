@@ -1,0 +1,19 @@
+@mixin generate-color-custom-properties($name) {
+  $base: map-get(map-get($colors, $name), 'base');
+  $contrast: map-get(map-get($colors, $name), 'contrast');
+
+  --color-#{$name}: #{$base};
+  --color-#{$name}-contrast: #{$contrast};
+  --color-#{$name}-rgb: #{hex-to-rgb($base)};
+}
+
+@mixin generate-color-classes($name) {
+  $base: map-get(map-get($colors, $name), 'base');
+  $contrast: map-get(map-get($colors, $name), 'contrast');
+
+  .color--#{$name} {
+    --theme-color: #{$base} !important;
+    --theme-color-contrast: #{$contrast} !important;
+    --theme-color-rgb: #{hex-to-rgb($base)};
+  }
+}
